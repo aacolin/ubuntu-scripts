@@ -63,4 +63,4 @@ EOF
 exit 0' > /usr/local/bin/gen-fstab 
 cp -v /etc/fstab /etc/fstab.bak     # Backup the fstab file
 chmod +x /usr/local/bin/gen-fstab ; gen-fstab       # Generate the new fstab file
-
+echo "System is ready for reboot."
