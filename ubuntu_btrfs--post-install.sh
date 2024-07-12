@@ -10,8 +10,8 @@ sudo cp -av /mnt/@/var/cache/* /mnt/@cache
 rm -frv /mnt/@/var/cache/* || echo "No cache directory"    # Copy the cache directory to the cache subvolume
 sudo cp -av /mnt/@/var/log/* /mnt/@log
 rm -frv /mnt/@/var/log/* || echo "No log directory"    # Copy the log directory to the log subvolume
-sudo umount /mnt                                            # Unmount the root partition
 mkdir -p /mnt/.snapshots
+sudo umount /mnt                                            # Unmount the root partition
 sudo mount -o subvol=@ /dev/sda3 /mnt                       # Mount the root subvolume
 sudo mount -o subvol=@home /dev/sda3 /mnt/home              # Mount the home subvolume
 sudo mount -o subvol=@cache /dev/sda3 /mnt/var/cache        # Mount the cache subvolume
